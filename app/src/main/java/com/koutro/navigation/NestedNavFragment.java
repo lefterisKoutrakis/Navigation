@@ -16,6 +16,8 @@ public class NestedNavFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if(getParentFragment() != null)
+            listener = (OnAttached) getParentFragment().getChildFragmentManager().findFragmentByTag("bottom");
         if(listener != null)
             listener.onAttached();
     }
@@ -23,7 +25,6 @@ public class NestedNavFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        listener = (OnAttached) getParentFragment().getChildFragmentManager().findFragmentByTag("bottom");
         return inflater.inflate(R.layout.nested_graph,container,false);
     }
 }
