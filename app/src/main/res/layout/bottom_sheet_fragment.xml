@@ -16,12 +16,13 @@
         app:behavior_hideable="false"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
-        <ImageView
-            android:id="@+id/up"
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_arrow_upward_red_24dp"/>
+            android:background="@color/colorPrimaryDark"
+            app:menu="@menu/menu_nav"
+            android:id="@+id/toolbar"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"

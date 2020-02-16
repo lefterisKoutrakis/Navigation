@@ -3,33 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nested_nav_graph"
-    app:startDestination="@id/firstPageFragment">
+    app:startDestination="@id/one">
 
     <fragment
-        android:id="@+id/firstPageFragment"
+        android:id="@+id/one"
         android:name="com.koutro.navigation.FirstPageFragment"
         android:label="first_page_fragment"
         tools:layout="@layout/first_page_fragment" >
         <action
             android:id="@+id/action_firstPageFragment_to_secondPageFragment"
-            app:destination="@id/secondPageFragment" />
+            app:destination="@id/two" />
     </fragment>
     <fragment
-        android:id="@+id/secondPageFragment"
+        android:id="@+id/two"
         android:name="com.koutro.navigation.SecondPageFragment"
         android:label="second_page_fragment"
         tools:layout="@layout/second_page_fragment" >
         <action
             android:id="@+id/action_secondPageFragment_to_thirdPageFragment"
-            app:destination="@id/thirdPageFragment" />
+            app:destination="@id/three" />
     </fragment>
     <fragment
-        android:id="@+id/thirdPageFragment"
+        android:id="@+id/three"
         android:name="com.koutro.navigation.ThirdPageFragment"
         android:label="third_page_fragment"
         tools:layout="@layout/third_page_fragment" >
         <action
             android:id="@+id/action_thirdPageFragment_to_firstPageFragment"
-            app:destination="@id/firstPageFragment" />
+            app:destination="@id/one" />
     </fragment>
 </navigation>

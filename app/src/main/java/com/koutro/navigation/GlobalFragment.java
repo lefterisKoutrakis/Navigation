@@ -33,8 +33,11 @@ public class GlobalFragment extends Fragment {
         getChildFragmentManager().beginTransaction()
                 .replace(R.id.bottom, bottomSheetFragment,"bottom")
                 .commit();
+
         return view;
     }
+
+    public ScreenSlidePagerAdapter getAdapter() { return (ScreenSlidePagerAdapter) mAdapter; }
 
     private void initializeViewPager() {
         mAdapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
