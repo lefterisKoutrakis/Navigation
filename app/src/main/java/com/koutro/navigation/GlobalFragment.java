@@ -43,4 +43,5 @@ public class GlobalFragment extends Fragment {
         mAdapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
         viewPager.setAdapter(mAdapter);
     }
+
 }
